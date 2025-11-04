@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>HealthCare Clinic</title>
+    <style>
+        .medical-gradient {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(220, 38, 38, 0.9), rgba(153, 27, 27, 0.8)), 
+                        url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid #dc2626;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .emergency-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <div class="bg-yellow-500 text-white py-2 px-4 text-center text-sm font-semibold">
+        <i class="fas fa-phone-alt mr-2"></i>Emergency Contact: 240-XXXX-XXXX | 24/7 Available
+    </div>
+
+    
+    <header class="text-white medical-gradient fixed top-0 w-full z-50 shadow-lg">
+        <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
+            <div class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-stethoscope text-red-600 text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold">HealthCare</span>
+                    <span class="block text-xs text-red-200">DR.L.S.PAL Clinic</span>
+                </div>
+            </div>
+            
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a href="#about" class="mr-6 hover:text-green-300 font-medium transition duration-300">
+                    <i class="fas fa-home mr-1"></i>Home
+                </a>
+                <a href="#details" class="mr-6 hover:text-green-300 font-medium transition duration-300">
+                    <i class="fas fa-user-md mr-1"></i>Doctor
+                </a>
+                <a href="#services" class="mr-6 hover:text-green-300 font-medium transition duration-300">
+                    <i class="fas fa-procedures mr-1"></i>Services
+                </a>
+                <a href="#contact" class="mr-6 hover:text-green-300 font-medium transition duration-300">
+                    <i class="fas fa-comment-medical mr-1"></i>Feedback
+                </a>
+            </nav>
+            
+            <button class="inline-flex items-center bg-white text-red-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-50 rounded-lg text-base font-semibold shadow-md transition duration-300">
+                <i class="fas fa-calendar-check mr-2"></i>Book Appointment
+            </button>
+        </div>
+    </header>
+
+
+    <section id="about" class="text-white hero-gradient pt-24 pb-20">
+        <div class="container mx-auto flex px-5 py-20 items-center justify-center flex-col">
+            <div class="text-center lg:w-2/3 w-full">
+                <h1 class="title-font sm:text-5xl text-4xl mb-6 font-bold leading-tight">
+                    Your Health is Our <span class="text-green-300">Priority</span>
+                </h1>
+                <p class="mb-8 leading-relaxed text-xl opacity-90">
+                    Comprehensive Healthcare Services with Compassion and Excellence
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-white text-red-600 border-0 py-3 px-8 focus:outline-none hover:bg-green-50 rounded-lg text-lg font-semibold shadow-lg transition duration-300">
+                        <i class="fas fa-phone-alt mr-2"></i>Call Now
+                    </button>
+                    <button class="bg-transparent text-white border-2 border-white py-3 px-8 focus:outline-none hover:bg-white hover:text-red-600 rounded-lg text-lg font-semibold transition duration-300">
+                        <i class="fas fa-directions mr-2"></i>Get Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="text-gray-600 body-font bg-gray-50 py-12">
+        <div class="container px-5 py-8 mx-auto">
+            <div class="flex flex-wrap -m-4 text-center">
+                <div class="p-4 sm:w-1/4 w-1/2">
+                    <div class="border-2 border-red-200 px-4 py-6 rounded-lg bg-white shadow-sm">
+                        <i class="fas fa-users text-red-600 text-3xl mb-4"></i>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">10,000+</h2>
+                        <p class="leading-relaxed">Happy Patients</p>
+                    </div>
+                </div>
+                <div class="p-4 sm:w-1/4 w-1/2">
+                    <div class="border-2 border-red-200 px-4 py-6 rounded-lg bg-white shadow-sm">
+                        <i class="fas fa-user-md text-red-600 text-3xl mb-4"></i>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">15+</h2>
+                        <p class="leading-relaxed">Years Experience</p>
+                    </div>
+                </div>
+                <div class="p-4 sm:w-1/4 w-1/2">
+                    <div class="border-2 border-red-200 px-4 py-6 rounded-lg bg-white shadow-sm">
+                        <i class="fas fa-procedures text-red-600 text-3xl mb-4"></i>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">50+</h2>
+                        <p class="leading-relaxed">Services</p>
+                    </div>
+                </div>
+                <div class="p-4 sm:w-1/4 w-1/2">
+                    <div class="border-2 border-red-200 px-4 py-6 rounded-lg bg-white shadow-sm">
+                        <i class="fas fa-clock text-red-600 text-3xl mb-4"></i>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">24/7</h2>
+                        <p class="leading-relaxed">Emergency</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="details" class="text-gray-900 body-font bg-white py-16">
+        <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                <div class="relative">
+                    <img class="object-cover object-center rounded-lg shadow-2xl w-full h-96" 
+                         src="https://i.ibb.co/HytdNW6/Whats-App-Image-2025-11-01-at-4-05-15-PM.jpg" 
+                         alt="Dr. Anil S. Pachnekar">
+                    <div class="absolute -bottom-4 -right-4 bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg">
+                        <div class="text-center">
+                            <div class="font-bold text-lg">15+ Years</div>
+                            <div class="text-sm">Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+                    Dr. L.S.PAL
+                    <br class="hidden lg:inline-block">
+                    <span class="text-lg text-red-600 font-semibold">D.H.M.S, C.G.O</span>
+                    <br>
+                    <span class="text-lg text-gray-600">PHYSICIAN & SURGEON</span>
+                </h1>
+                <div class="mb-8 leading-relaxed text-gray-700 space-y-3">
+                    <p class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-red-500 mr-3 w-5"></i>
+                        <strong class="w-24">Address:</strong> 
+                        <span>GNM/95/475 Mukund Nagar,Weird,Dharavi, Mumbai-400017.</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-sun text-yellow-500 mr-3 w-5"></i>
+                        <strong class="w-24">Morning:</strong> 
+                        <span>1:00 AM to 5:00 PM</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-moon text-blue-500 mr-3 w-5"></i>
+                        <strong class="w-24">Evening:</strong> 
+                        <span>7:30 PM to 11:00 PM</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-phone text-green-500 mr-3 w-5"></i>
+                        <strong class="w-24">Contact:</strong> 
+                        <span class="emergency-badge bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold">240-XXXX-XXXX</span>
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">General Medicine</span>
+                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Surgery</span>
+                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">Emergency Care</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="services" class="text-gray-600 body-font bg-gray-50 py-16">
+        <div class="container px-5 py-12 mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="sm:text-4xl text-3xl font-bold title-font text-gray-900 mb-4">Our Medical Services</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive healthcare services with modern equipment and expert care</p>
+            </div>
+            
+            <div class="flex flex-wrap -m-4">
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="Blood Report" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/Ls24rNCZ/Whats-App-Image-2025-09-24-at-4-30-23-PM.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">DIAGNOSTIC</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Blood Report</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹350</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="X-Ray" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/JnCVBnJV/owen-beard-DK8j-Xx1-B-1c-unsplash.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">DIAGNOSTIC</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">X-Ray</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹500</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="CT Scan" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/tCq1xRtx/accuray-QTP8-UKW-Pg-I-unsplash.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">DIAGNOSTIC</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">CT Scan</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹500</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="Diabetes Check" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/4NYgMrX0/jasmin-ne-z-Iwb4-Xbmm-H0-unsplash.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">CHECKUP</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Diabetes & Blood Checking</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹350</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="Saline" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/2S8rGVV4/Whats-App-Image-2025-09-24-at-4-34-14-PM.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">TREATMENT</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Saline</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹450</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="Physical Health Guide" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/FKsGCQ4d/mina-rad-UYBAbwaq-NIg-unsplash.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">CONSULTATION</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Physical Health Guide</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹200</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="Physiotherapy" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/jdLgtTwz/sincerely-media-w-GFib-XDQl-BI-unsplash.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">THERAPY</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Physiotherapy</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹1500</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md h-full">
+                        <div class="block relative h-48 rounded overflow-hidden mb-4">
+                            <img alt="Medicine" class="object-cover object-center w-full h-full block" src="https://i.postimg.cc/1XPK6xJ3/Whats-App-Image-2025-09-24-at-4-27-33-PM.jpg">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-red-500 text-xs tracking-widest title-font mb-1">PHARMACY</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium mb-2">Medicine</h2>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-green-600">₹300</span>
+                                <button class="text-blue-600 hover:text-red-700">
+                                    <i class="fas fa-plus-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="text-gray-600 body-font bg-white py-16">
+    <div class="container mx-auto flex flex-col px-5 py-12 justify-center items-center">
+        <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-red-900">
+                <i class="fas fa-comment-medical mr-3"></i>Your Feedback Matters
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">Help us serve you better with your valuable feedback</p>
+            
+            <!-- Formspree Form -->
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="w-full max-w-2xl">
+                <div class="flex w-full justify-center items-end">
+                    <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                        <label for="feedback-field" class="leading-7 text-sm text-red-600 font-medium">Your Feedback</label>
+                        <input type="text" id="feedback-field" name="feedback" 
+                               class="w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-3 px-4 leading-8 transition-colors duration-200 ease-in-out"
+                               placeholder="Share your experience with us..." required>
+                    </div>
+                    <button type="submit" class="inline-flex items-center text-white medical-gradient border-0 py-3 px-8 focus:outline-none hover:bg-red-700 rounded-lg text-lg font-semibold shadow-md transition duration-300">
+                        <i class="fas fa-paper-plane mr-2"></i>Submit
+                    </button>
+                </div>
+            </form>
+            
+            <p class="text-sm mt-3 text-green-500 mb-8 w-full">
+                <i class="fas fa-heart text-red-500 mr-1"></i>Your feedback helps us improve our services
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    
+    <footer class="text-gray-600 body-font medical-gradient">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <div class="flex title-font font-medium items-center text-white md:justify-start justify-center">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-stethoscope text-red-600"></i>
+                </div>
+                <span class="ml-3 text-xl font-bold">HealthCare Clinic</span>
+            </div>
+            <p class="text-sm text-red-100 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-red-300 sm:py-2 sm:mt-0 mt-4">
+                © 2024 Dr. L.S.Clinic — 
+                <a href="#" class="text-white ml-1" rel="noopener noreferrer" target="_blank">Your Health Partner</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-red-100 hover:text-white ml-3">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="text-red-100 hover:text-white ml-3">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="text-red-100 hover:text-white ml-3">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="text-red-100 hover:text-white ml-3">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <script>
+
+        document.getElementById("submit-feedback").addEventListener("click", async (event) => {
+            event.preventDefault(); 
+            const feedback = document.getElementById("feedback-field").value;
+
+            if (!feedback) {
+                alert("Please enter your feedback!");
+                return;
+            }
+
+            try {
+                const response = await fetch("http://localhost:5000/feedback", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ report: feedback }),
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    alert(data.message || "Thank you for your valuable feedback!");
+                    document.getElementById("feedback-field").value = "";
+                } else {
+                    alert(data.message || "Failed to submit feedback.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Failed to submit feedback. Please try again.");
+            }
+        });
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
